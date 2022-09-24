@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Row, Col } from 'antd';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import NavLeft from './components/NavLeft';
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
+import NavLeft from './components/navLeft/navLeft';
 import './style/common.less';
 
 export default class Admin extends Component {
@@ -14,9 +14,7 @@ export default class Admin extends Component {
         </Col>
         <Col span={20} className="main">
           <Header />
-          <div className="content">
-            {this.props.children}
-          </div>
+         content
           <Footer />
         </Col>
       </Row>
