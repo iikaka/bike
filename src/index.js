@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Admin from './admin'
+// import Admin from './admin';
+import Router from './Router'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <Admin/>
+  <Router/>
   ,
   document.getElementById('root')
 );

@@ -35,7 +35,7 @@ export default class navLeft extends Component {
     }
   render() {
     return (
-      <div>
+      <div >
         <div className='logo'>
             <img src="/assets/logo-1.svg" />
             <h1>小牧童智能垃圾桶</h1>
