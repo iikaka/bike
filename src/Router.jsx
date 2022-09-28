@@ -1,34 +1,27 @@
 import React, { Component } from 'react'
-import { HashRouter, Route, Switch, Link } from 'react-router-dom'
-import Home from './pages/router/home'
-import Main from './pages/router/main'
-import Info from './pages/router/info'
-import About from './pages/router/about'
-import Content from './pages/router/content'
-import Value from './pages/router/value'
-import NoMatch from './pages/router/noMatch'
+import { HashRouter,Route, Switch  } from 'react-router-dom'
+import App from './App'
+import Login from './pages/Login'
+import Admin from './admin'
+import Button from './pages/ui/Button'
+import NoMatch from './pages/nomatch/NoMatch'
 export default class IRouter extends Component {
   render() {
     return (
       <div>
         <HashRouter>
-              <Home>
+          <App>
+            <Route path='/login' component={Login} ></Route>
+            <Route path='/admin' render={()=>
+              <Admin>
                 <Switch>
-                <Route path='/main'  render={ ()=>
-                  <Main>
-                     <Route path='/main/:value' component={Info}></Route>
-                  </Main>
-                }>
-                </Route>
-                <Route path='/about' component={About}></Route>
-                <Route path='/content' render={ ()=>
-                <Content>
-                     <Route path='/content' component={Value}></Route>
-                </Content>
-              }></Route>
-              <Route  component={NoMatch}></Route>
-              </Switch>
-              </Home>
+                  <Route path='/admin/ui/buttons' component={Button}></Route>
+                  <Route component={NoMatch}></Route>
+                </Switch>
+              </Admin>
+            }>
+            </Route>
+          </App>
         </HashRouter>
       </div>
     )

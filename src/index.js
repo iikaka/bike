@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import Admin from './admin';
 import Router from './Router'
+import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
